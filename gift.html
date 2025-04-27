@@ -1,26 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Happy 4th Month!!!</title>
   <style>
     body {
       margin: 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       justify-content: center; 
-      height: 100vh;          
       align-items: center;
+      height: 100vh;
       background-color: #fce4ec;
+      font-family: Arial, sans-serif;
+      text-align: center;
     }
 
     .video-wrapper {
       width: 80%;
       max-width: 800px;
+      margin-bottom: 20px;
     }
 
     .video-container {
       position: relative;
-      padding-bottom: 56.25%;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
       height: 0;
       overflow: hidden;
     }
@@ -33,6 +38,23 @@
       height: 100%;
       border: 0;
     }
+
+    .message-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+
+    .message-button img {
+      width: 50px;
+      height: 50px;
+    }
+
+    p {
+      margin: 10px 0 5px;
+      font-size: 18px;
+      color: #880e4f;
+    }
   </style>
 </head>
 <body>
@@ -44,12 +66,14 @@
         allowfullscreen>
       </iframe>
     </div>
-  </div><br><br>
-  <p>Click here for the last message!</p><br>
+  </div>
+
+  <p>Click here for the last message!</p>
+
   <form action="lm.html">
-  <button>
-    <img src="ckh1.jpg" alt="last message" width="50" height="50">
-  </button>
+    <button class="message-button" type="submit">
+      <img src="ckh1.jpg" alt="Last message">
+    </button>
   </form>
 </body>
 </html>
