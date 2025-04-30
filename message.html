@@ -36,21 +36,6 @@
       flex-wrap: wrap;
     }
 
-   .music-control {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  text-align: center;
-  cursor: pointer;
-  z-index: 999;
-}
-
-.music-control p {
-  margin: 0;
-  font-size: 12px;
-}
-
-
     .section img {
       max-width: 100%;
       height: auto;
@@ -76,6 +61,20 @@
       cursor: pointer;
     }
 
+    .music-control {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      text-align: center;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .music-control p {
+      margin: 0;
+      font-size: 12px;
+    }
+
     @media (max-width: 768px) {
       .left-img, .right-img {
         flex-direction: column;
@@ -89,22 +88,20 @@
 </head>
 <body>
 
+<!-- Music Audio -->
 <audio id="bg-music" loop>
   <source src="iak.mp3" type="audio/mpeg">
 </audio>
 
-<script>
-  window.addEventListener('click', function () {
-    const audio = document.getElementById('bg-music');
-    audio.play();
-  });
-</script>
-
-<h1>HAPPY 4TH MONTH CUTEEE!!!</h1>
-<div class="music-control">
+<!-- Music Control in Corner -->
+<div class="music-control" onclick="document.getElementById('bg-music').play()">
   <p>Click to listen to music</p>
   <img src="music.jpg" width="50" height="50" alt="Music icon">
 </div>
+
+<h1>HAPPY 4TH MONTH CUTEEE!!!</h1>
+
+<img class="centered-img" src="cute.jpg" alt="sa akong palangga" width="450" height="350">
 
 <div style="text-align: center;">
   <p style="max-width: 1000px; margin: 0 auto;"> Happy 4th month sa bestfriend kong nililigawan ko, una, ang cute mo, pagalawa, ang cute mo pa rin talaga HAHAHAHA... pero ito siryus na...
@@ -147,18 +144,18 @@
   </p>
 </div>
 
-
 <div style="text-align: center;">
   <p style="max-width: 1000px; margin: 0 auto;">Once again, Happy 4th Monthsary and I miss you na pooo....</p><br>
 
-<form action="gift.html">
-  <button class="img-button" type="submit">
-    <img src="ckh2.jpg" alt="Click here!!!" width="200" height="200">
-  </button>
-</form>
+  <form action="gift.html">
+    <button class="img-button" type="submit">
+      <img src="ckh2.jpg" alt="Click here!!!" width="200" height="200">
+    </button>
+  </form>
 
-<p style="max-width: 1000px; margin: 0 auto;">Tap the heart to claim your gift...<br>
-pls, don't judge me po...:(</p>
+  <p style="max-width: 1000px; margin: 0 auto;">Tap the heart to claim your gift...<br>
+  pls, don't judge me po...:(</p>
 </div>
+
 </body>
 </html>
